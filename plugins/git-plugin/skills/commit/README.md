@@ -19,13 +19,13 @@ Add the skill to your `~/.claude/settings.json`:
   "skills": [
     {
       "name": "commit",
-      "path": "/path/to/falkens-claude-plugins/skills/git-commit/skill.md"
+      "path": "/path/to/falkenslab-plugins/skills/git-commit/skill.md"
     }
   ]
 }
 ```
 
-Replace `/path/to/falkens-claude-plugins` with the actual path where you cloned this repo.
+Replace `/path/to/falkenslab-plugins` with the actual path where you cloned this repo.
 
 ## Usage
 

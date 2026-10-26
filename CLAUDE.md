@@ -1,11 +1,11 @@
-# falkens-claude-plugins
+# falkenslab-plugins
 
 A personal marketplace of Claude Code plugins. Each plugin is a self-contained package that can include skills, hooks, MCP servers, and commands — installed independently.
 
 ## Repository structure
 
 ```
-falkens-claude-plugins/
+falkenslab-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json        # Global plugin registry (index of all plugins)
 └── plugins/
@@ -34,7 +34,7 @@ falkens-claude-plugins/
 
 ```json
 {
-  "name": "falkens-claude-plugins",
+  "name": "falkenslab-plugins",
   "owner": { "name": "Falken's Lab Team" },
   "plugins": [
     {

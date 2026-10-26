@@ -1,5 +1,5 @@
 {
   "enabledPlugins": {
-    "git-plugin@falkens-claude-plugins": true
+    "git-plugin@falkenslab-plugins": true
   }
 }

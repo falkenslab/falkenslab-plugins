@@ -20,7 +20,7 @@ Seleccionamos la pestaña "Marketplaces" y la opción "+ Add Marketplace":
 
 ![alt text](docs/images/image-1.png)
 
-Introducimos nuestro repositorio de GitHub, `falkenslab/falkens-claude-plugins` donde se encuentran los plugins:
+Introducimos nuestro repositorio de GitHub, `falkenslab/falkenslab-plugins` donde se encuentran los plugins:
 
 ![alt text](docs/images/image-2.png)
 
