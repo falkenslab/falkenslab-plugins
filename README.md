@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/images/logo.svg" alt="falkenslab-plugins logo: three indigo plugins joined to one coral host" width="112"/>
+<img src="docs/images/logo.svg" alt="falkenslab-plugins logo: indigo plugins in orbit around a coral core" width="112"/>
 
 # falkenslab-plugins
 
