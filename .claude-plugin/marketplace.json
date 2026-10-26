@@ -19,7 +19,7 @@
             "name": "minispec",
             "source": {
                 "source": "git-subdir",
-                "url": "falkenslab/minispec",
+                "url": "https://github.com/falkenslab/minispec.git",
                 "path": "integrations/claude",
                 "ref": "master"
             },
