@@ -3,7 +3,7 @@
     "owner": {
         "name": "Falken's Lab Team"
     },
-    "description": "Falken's Lab plugins for Claude Code: development workflow, house style and MiniSpec.",
+    "description": "Falken's Lab plugins for Claude Code: development workflow and house style.",
     "plugins": [
         {
             "name": "falkenslab-dev",
@@ -14,16 +14,6 @@
             "name": "falkenslab-style",
             "source": "./plugins/falkenslab-style",
             "description": "Falken's Lab's house style: READMEs and documentation sites, the web look, framed terminal screenshots and Markdown rules."
-        },
-        {
-            "name": "minispec",
-            "source": {
-                "source": "git-subdir",
-                "url": "https://github.com/falkenslab/minispec.git",
-                "path": "integrations/claude",
-                "ref": "master"
-            },
-            "description": "MiniSpec's skills: write features, fixes and ADRs as short specs and implement them."
         }
     ]
 }

@@ -140,4 +140,3 @@ Refer to each component's `README.md` for exact steps. Common patterns:
 |--------|---------|-------------|
 | `falkenslab-dev` | 0.1.0 | Development workflow: commit, verify, update-docs, release, sync-issues, upgrade-deps, add-tool |
 | `falkenslab-style` | 0.1.0 | House style: READMEs and docs sites, web look, terminal screenshots, Markdown rules |
-| `minispec` | 1.0.0 | MiniSpec skills, served from `falkenslab/minispec` (`integrations/claude`) via a `git-subdir` source |

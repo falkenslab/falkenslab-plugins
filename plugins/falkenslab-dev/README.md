@@ -21,4 +21,4 @@ El flujo de desarrollo de Falken's Lab para cualquiera de sus repositorios: comm
 
 ## Requisitos
 
-Git y, según la skill, Node.js con npm y la CLI de GitHub (`gh`) con sesión iniciada. Las skills de MiniSpec (`minispec-*`) vienen en el plugin `minispec`.
+Git y, según la skill, Node.js con npm y la CLI de GitHub (`gh`) con sesión iniciada. Las skills de MiniSpec (`minispec-*`) las instala `npx @falkenslab/minispec init` en cada repo.
