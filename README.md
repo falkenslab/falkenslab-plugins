@@ -6,9 +6,11 @@ Cada plugin es independiente y se puede instalar por separado.
 
 ## Plugins disponibles
 
-| Plugin                              | Versión | Descripción                                                         |
-| ----------------------------------- | ------- | ------------------------------------------------------------------- |
-| [git-plugin](./plugins/git-plugin/) | 0.0.1   | Operaciones Git desde Claude Code: commits inteligentes, push y más |
+| Plugin                                          | Versión | Descripción                                                                                     |
+| ----------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------- |
+| [falkenslab-dev](./plugins/falkenslab-dev/)     | 0.1.0   | Flujo de desarrollo: commit, verify, update-docs, release, sync-issues, upgrade-deps y add-tool |
+| [falkenslab-style](./plugins/falkenslab-style/) | 0.1.0   | Estilo de la casa: README y docs, webs, capturas de terminal y Markdown                         |
+| [minispec](https://github.com/falkenslab/minispec/tree/master/integrations/claude) | 1.0.0 | Skills de MiniSpec: features, fixes y ADRs como especificaciones cortas            |
 
 ## Añadir el marketplace de plugins
 
@@ -24,7 +26,7 @@ Introducimos nuestro repositorio de GitHub, `falkenslab/falkenslab-plugins` dond
 
 ![alt text](docs/images/image-2.png)
 
-Seleccionamos el plugin `git-plugin` en este caso, si es el que queremos instalar desde nuestro marketplace:
+Seleccionamos el plugin que queremos instalar desde nuestro marketplace (en la captura, el antiguo `git-plugin`):
 
 ![alt text](docs/images/image-3.png)
 

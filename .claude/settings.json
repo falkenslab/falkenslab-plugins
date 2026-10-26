@@ -1,5 +1,6 @@
 {
   "enabledPlugins": {
-    "git-plugin@falkenslab-plugins": true
+    "falkenslab-dev@falkenslab-plugins": true,
+    "falkenslab-style@falkenslab-plugins": true
   }
 }
