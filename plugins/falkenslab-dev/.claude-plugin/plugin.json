@@ -1,0 +1,6 @@
+{
+  "name": "falkenslab-dev",
+  "description": "Falken's Lab's development workflow for any of its repositories: commit, verify, update-docs, release, sync-issues, upgrade-deps and add-tool.",
+  "author": { "name": "Falken's Lab Team" },
+  "version": "0.1.0"
+}
