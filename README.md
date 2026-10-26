@@ -1,75 +1,87 @@
-# Falken's Claude Plugins
+<div align="center">
 
-Marketplace personal de plugins para [Claude Code](https://claude.ai/code) — skills, hooks, servidores MCP y comandos que amplían tu flujo de trabajo con Claude Code.
+<img src="docs/images/logo.svg" alt="falkenslab-plugins logo: three indigo plugins joined to one coral host" width="112"/>
 
-Cada plugin es independiente y se puede instalar por separado.
+# falkenslab-plugins
 
-## Plugins disponibles
+**Give Claude Code the way Falken's Lab works, in every repository and on every machine.**<br/>
+One marketplace, two plugins: the development workflow and the house style, installed in a minute.
 
-| Plugin                                          | Versión | Descripción                                                                                     |
-| ----------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------- |
-| [falkenslab-dev](./plugins/falkenslab-dev/)     | 0.1.0   | Flujo de desarrollo: commit, verify, update-docs, release, sync-issues, upgrade-deps y add-tool |
-| [falkenslab-style](./plugins/falkenslab-style/) | 0.1.0   | Estilo de la casa: README y docs, webs, capturas de terminal y Markdown                         |
-| [minispec](https://github.com/falkenslab/minispec/tree/master/integrations/claude) | 1.0.0 | Skills de MiniSpec: features, fixes y ADRs como especificaciones cortas            |
+![Claude Code plugins](https://img.shields.io/badge/Claude%20Code-plugins-d97757)
+![Plugins: 2](https://img.shields.io/badge/plugins-2-4453b8)
+![Skills: 11](https://img.shields.io/badge/skills-11-6272de)
+[![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-16a34a)](LICENSE)
 
-## Añadir el marketplace de plugins
+</div>
 
-Ejecutamos el comando built-in `/plugin` en Claude Code:
+falkenslab-plugins is a [Claude Code](https://code.claude.com/docs) plugin marketplace with the skills Falken's Lab uses across its repositories: commit, verify, document, release and keep issues in sync like every other project does, and write READMEs, documentation sites and screenshots that look like the rest of the family. Add the marketplace once, install the plugins you want, and Claude Code picks the skills up whenever the task calls for them.
 
-![alt text](docs/images/image.png)
+## ✨ Why falkenslab-plugins
 
-Seleccionamos la pestaña "Marketplaces" y la opción "+ Add Marketplace":
+- 🧩 **One install instead of copies.** The skills every repository carried in its own `.claude/skills/` now live in one place, versioned and shared.
+- 🎯 **Generic, but project-aware.** The workflow skills read each project's `CLAUDE.md`, `.minispec/`, `package.json` and CI, and step aside when a repository has its own version of a skill.
+- 🎨 **A consistent house style.** READMEs, Docusaurus sites, terminal screenshots and Markdown follow the same rules in every Falken's Lab project.
+- ✋ **Nothing outward without asking.** No push, release, publish or new repository unless you ask for it; `release` only runs when you invoke it.
+- 🔁 **Always up to date.** `/plugin marketplace update` brings every machine to the latest version of the skills.
 
-![alt text](docs/images/image-1.png)
+## 🚀 Quick start
 
-Introducimos nuestro repositorio de GitHub, `falkenslab/falkenslab-plugins` donde se encuentran los plugins:
-
-![alt text](docs/images/image-2.png)
-
-Seleccionamos el plugin que queremos instalar desde nuestro marketplace (en la captura, el antiguo `git-plugin`):
-
-![alt text](docs/images/image-3.png)
-
-Y finalmente indicamos el ámbito en el que queremos instalarlo:
-
-![alt text](docs/images/image-4.png)
-
-Ejecutamos el comando `/reload-plugins` para que Claude reconozca los nuevos plugins (si no funciona, reinicia `claude`) ¡y listo! 👍
-
-## Estructura de un plugin
+You need [Claude Code](https://code.claude.com/docs) 2.1 or later. In a Claude Code session:
 
 ```
-plugins/
-└── <nombre-plugin>/
-    ├── .claude-plugin/
-    │   └── plugin.json       # Nombre, descripción y versión
-    ├── skills/
-    │   └── <nombre-skill>/
-    │       ├── SKILL.md      # Prompt que carga Claude Code
-    │       └── README.md
-    ├── hooks/
-    │   └── <nombre-hook>/
-    │       ├── hook.sh
-    │       └── README.md
-    └── mcp/
-        └── <nombre-servidor>/
-            └── README.md
+/plugin marketplace add falkenslab/falkenslab-plugins
+/plugin install falkenslab-dev@falkenslab-plugins
+/plugin install falkenslab-style@falkenslab-plugins
+/reload-plugins
 ```
 
-## Añadir un plugin
+The skills show up as `/falkenslab-dev:<skill>` and `/falkenslab-style:<skill>`, and Claude also loads them by itself when a task needs them.
 
-1. Crea `plugins/<nombre-plugin>/` siguiendo la estructura anterior.
-2. Añade `.claude-plugin/plugin.json` con nombre, descripción y versión.
-3. Escribe un `README.md` por componente (descripción + instalación + ejemplo de uso).
-4. Registra el plugin en `.claude-plugin/marketplace.json`.
+<details>
+<summary>Prefer the menus?</summary>
 
-Consulta [CLAUDE.md](./CLAUDE.md) para las convenciones y guías completas.
+Run `/plugin`, open the **Marketplaces** tab, choose **+ Add Marketplace** and type `falkenslab/falkenslab-plugins`. Then pick the plugins in **Discover** and choose the scope to install them in (you, this project, or this project only on your machine).
 
-## Referencias
+</details>
 
-* [Official Anthropic Plugin Marketplace](https://claude.com/plugins)
-* [Claude Code Plugins Directory](https://github.com/anthropics/claude-plugins-official)
-* [Create plugins](https://code.claude.com/docs/en/plugins)
-* [Create and distribute a plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces)
-* [Extend Claude with skills](https://code.claude.com/docs/en/skills)
-* [Built-in commands](https://code.claude.com/docs/en/commands)
+## 💬 What you can ask
+
+- 🛠️ **As a developer**: "commit this", "run the checks", "update the docs for the new option", "sync the issues with the MiniSpec notes", "bump the MCP SDK", "add a `list_courses` tool".
+- 🚢 **As a maintainer**: `/falkenslab-dev:release` decides the semver bump, writes the notes, tags, creates the GitHub release and publishes to npm.
+- 🎨 **As a writer**: "rewrite this README in the Falken's Lab style", "give the docs site our look", "take a screenshot of this session for the README", "fix the Markdown in `docs/guide.md`".
+
+## 📸 See it at work
+
+Claude Code with both plugins installed, asked what they give you:
+
+<div align="center">
+
+<img src="docs/images/see-it-claude-code.png" alt="Claude Code listing the skills of the falkenslab-dev and falkenslab-style plugins" width="760"/>
+
+</div>
+
+## 🧰 What's inside
+
+| Plugin | Skills |
+| --- | --- |
+| 🛠️ [falkenslab-dev](./plugins/falkenslab-dev/) | `commit`, `verify`, `update-docs`, `release`, `sync-issues`, `upgrade-deps`, `add-tool` |
+| 🎨 [falkenslab-style](./plugins/falkenslab-style/) | `falkenslab-docs`, `falkenslab-site-style`, `falkenslab-terminal-screenshots`, `markdown-writing` |
+
+MiniSpec's skills (`minispec-*`) aren't here: `npx @falkenslab/minispec init` installs them in each repository that uses [MiniSpec](https://github.com/falkenslab/minispec).
+
+## 📚 Documentation
+
+- **[falkenslab-dev](./plugins/falkenslab-dev/)**: the development workflow skills, what each does and what it needs.
+- **[falkenslab-style](./plugins/falkenslab-style/)**: the house style skills, their templates and scripts.
+- **[Create plugins](https://code.claude.com/docs/en/plugins)**: how Claude Code plugins work.
+- **[Plugin marketplaces](https://code.claude.com/docs/en/plugin-marketplaces)**: how a marketplace like this one is built and distributed.
+
+## 🛠️ Developing
+
+Each plugin lives in `plugins/<name>/` with its `.claude-plugin/plugin.json` and one folder per skill, and is registered in `.claude-plugin/marketplace.json`; [CLAUDE.md](./CLAUDE.md) has the conventions. Check your changes with `claude plugin validate .` and try a plugin without installing it with `claude --plugin-dir plugins/<name>`.
+
+<div align="center">
+
+Made with 💖 by Falken's Lab Team
+
+</div>
